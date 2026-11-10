@@ -1,0 +1,94 @@
+[
+  {
+    "id": "idle",
+    "label": "Standing Idle",
+    "file": "Standing Idle.fbx",
+    "kind": "loop"
+  },
+  {
+    "id": "squat",
+    "label": "Squat",
+    "file": "Air Squat.fbx",
+    "kind": "loop",
+    "category": "Lower Body",
+    "targets": ["Full Body", "Chest", "Back", "Legs", "Abs"],
+    "muscles": ["Legs", "Glutes"],
+    "instruction": "Stand with feet shoulder-width apart. Sit your hips back, keep your chest lifted, then press through your heels.",
+    "goalOrder": {
+      "Strength": 0,
+      "Muscle Gain": 0,
+      "General Fitness": 0,
+      "Weight Loss": 1,
+      "Endurance": 1
+    }
+  },
+  {
+    "id": "pushup-ready",
+    "label": "Ready to Push-ups",
+    "file": "Idle To Push Up.fbx",
+    "kind": "transition",
+    "library": false
+  },
+  {
+    "id": "pushup-loop",
+    "label": "Push-up Loop",
+    "file": "Push Up.fbx",
+    "kind": "loop",
+    "library": false
+  },
+  {
+    "id": "pushups",
+    "label": "Push-ups",
+    "kind": "composite",
+    "stages": [
+      { "animationId": "pushup-ready", "mode": "once" },
+      { "animationId": "pushup-loop", "mode": "loop", "alignRootToPrevious": true }
+    ],
+    "category": "Upper Body",
+    "targets": ["Full Body", "Chest", "Shoulders", "Arms"],
+    "muscles": ["Chest", "Triceps", "Shoulders"],
+    "instruction": "Keep your body in a straight line. Lower your chest with control, then press through your palms to return to the starting position.",
+    "goalOrder": {
+      "Strength": 1,
+      "Muscle Gain": 1,
+      "General Fitness": 1,
+      "Weight Loss": 2,
+      "Endurance": 2
+    }
+  },
+  {
+    "id": "curl",
+    "label": "Bicep Curl",
+    "file": "Bicep Curl.fbx",
+    "kind": "loop",
+    "category": "Arms",
+    "targets": ["Full Body", "Back", "Shoulders", "Arms"],
+    "muscles": ["Biceps", "Arms"],
+    "equipment": ["Dumbbells", "Full Gym"],
+    "instruction": "Keep elbows close to your sides. Curl with control, pause briefly, then lower slowly.",
+    "goalOrder": {
+      "Strength": 1,
+      "Muscle Gain": 1,
+      "General Fitness": 2,
+      "Weight Loss": 2,
+      "Endurance": 2
+    }
+  },
+  {
+    "id": "jacks",
+    "label": "Jumping Jacks",
+    "file": "Jumping Jacks.fbx",
+    "kind": "loop",
+    "category": "Cardio",
+    "targets": ["Full Body", "Chest", "Shoulders", "Arms", "Legs", "Abs"],
+    "muscles": ["Full body", "Cardio"],
+    "instruction": "Keep a comfortable pace, land softly, and stay tall through your torso.",
+    "goalOrder": {
+      "Weight Loss": 0,
+      "Endurance": 0,
+      "General Fitness": 1,
+      "Muscle Gain": 2,
+      "Strength": 2
+    }
+  }
+]
